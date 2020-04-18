@@ -5,8 +5,8 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Stark Industries</title>
-		<link rel="stylesheet" href="/TestingApp/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/TestingApp/css/bootstrap.css">
+		<link rel="stylesheet" href="/StarkLearningApp/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/StarkLearningApp/css/bootstrap.css">
 	</head>
 	<body>
 	
@@ -28,7 +28,6 @@
 		<!-- End of Navbar -->
 		
 		<!-- Content -->
-		
 		<div class="row" style="background-color: rgba(248, 245, 240, 1);">
 			<div class="col">
 				<a href = ""><button type="button" class="btn btn-secondary">Create New User</button></a>
