@@ -4,48 +4,10 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Welcome to Stark Industry</title>
+		<title>Stark Industries</title>
 		<link rel="stylesheet" href="/TestingApp/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/TestingApp/css/bootstrap.css">
 	</head>
-	<style>
-		
-		#typing{
-			animation: type 4s steps(16) infinite;
-			overflow: hidden;
-			white-space:nowrap;
-			border-right: 4px solid white;
-		}
-		
-		@keyframes type {
-			0% {
-				width:0ch;
-			}
-			100% {
-				width:16ch;
-			}
-		}
-		
-		body {
-			background-image: url(/StarkLearningApp/img/study.jpg);
-			background-size: cover;
-			background-repeat: no-repeat;
-		}
-		
-		.centered {
-		  position: absolute;
-		  top: 50%;
-		  left: 50%;
-		  transform: translate(-50%, -50%);
-		  color:white;
-		  font-family: "Lucida Console", Courier, monospace;
-		}
-		
-		html,body {
-			height:100%;
-		}
-		
-	</style>
 	<body>
 	
 		<!-- Navbar -->
@@ -65,17 +27,8 @@
 		</nav>
 		<!-- End of Navbar -->
 		
-		<!-- Content -->
-		<div class="centered">
-			<h1 id="typing">Hello Students.</h1>
-			<h3>Welcome to Stark's Learning Platform.</h3>
-			<br>
-			<button type="button class="btn btn-basic" style="background-color: black; border: none; font-size: 20px;">
-				<a href="login_page" style="text-decoration: none; color: #ffffff !important;">Get Started</a>
-			</button>
-		</div>
-		<!-- end of Content -->
 		
+
 		<!-- Footer -->
 		<div class = "navbar navbar-dark bg-primary fixed-bottom">
 			<footer class="footer">
