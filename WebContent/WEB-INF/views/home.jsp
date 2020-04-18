@@ -5,8 +5,8 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Welcome to Stark Industry</title>
-		<link rel="stylesheet" href="/TestingApp/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/TestingApp/css/bootstrap.css">
+		<link rel="stylesheet" href="/StarkLearningApp/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/StarkLearningApp/css/bootstrap.css">
 	</head>
 	<style>
 		
