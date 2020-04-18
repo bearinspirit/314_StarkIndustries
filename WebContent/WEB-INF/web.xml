@@ -4,5 +4,6 @@
   <welcome-file-list>
     <welcome-file>home_page</welcome-file>
     <welcome-file>userAdmin</welcome-file>
+    <welcome-file>test_page</welcome-file>
   </welcome-file-list>
 </web-app>
