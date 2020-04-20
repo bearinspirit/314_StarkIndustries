@@ -9,12 +9,13 @@
 		<link rel="stylesheet" href="/StarkLearningApp/css/bootstrap.css">
 		<link rel="stylesheet" href="/StarkLearningApp/css/all.css"> 
 		<link rel="stylesheet" href="/StarkLearningApp/css/userAdmin.css">
+		<script type="text/javascript" src="/StarkLearningApp/js/userAdmin.js"></script>
 	</head>
 	
 	<body>
 		<!-- Navbar -->
-		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-			<a class="navbar-brand" href="home_page">Stark Industries</a>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="topPage">
+			<a class="navbar-brand" href="home">Stark Industries</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
 			  <span class="navbar-toggler-icon"></span>
 			</button>
@@ -27,7 +28,7 @@
 						</a>
   					</li> 
  					<li>
- 						<a class="nav-link" href = "home_page">
+ 						<a class="nav-link" href = "home">
   						<button type="button" class="btn btn-outline-secondary">
   							<i class="fas fa-sign-out-alt"></i><span style="padding-left: 10px;">Logout</span>
   						</button>
@@ -114,30 +115,7 @@
 								</div>
 						    </td>
 				   		</tr>
-				   		
-				   		<tr>
-						    <td class="font-weight-bold">2</td>
-						    <td>123457</td>
-						    <td>Yeo Cindy</td>
-						    <td>Moderator</td>
-						    <td></td>
-						    <td>
-						    	<button type="button" id="resetPwBtn">
-						    		<i class="fas fa-lock" data-toggle="modal" data-target="#resetPwModal" aria-hidden="true"></i>
-						    	</button>
-						    </td>
-						    <td>
-						    	<div class="form-group">
-									<div class="d-inline custom-control custom-switch">
-								      	<input type="checkbox" onclick="suspendFunction()" id="suspendBtn1" class="custom-control-input">
-								      	<label class="custom-control-label" for="suspendBtn1"></label>
-								    </div>
-								    <div class="d-inline font-weight-bold" id="suspendOff">
-						    			Off
-						    		</div>
-								</div>
-						    </td>
-				   		</tr>
+
 					</tbody>
 				</table>
 			</div>
@@ -239,8 +217,7 @@
 			        	<h4 class="text-center">Do you wish to reset the password?</h4>
 			      	</div>
 			      	<div class="modal-footer">
-			      		<button type="button" class="btn btn-primary ml-auto" onclick="onSubmitResetPw()">Submit</button>
-			      		<button type="button" class="btn btn-primary mr-auto">Cancel</button>
+			      		<button type="button" class="btn btn-primary ml-auto mr-auto" onclick="onSubmitResetPw()">Submit</button>
 			      	</div>
 		    	</div>
 			</div>
@@ -262,8 +239,7 @@
 			        	<h4 class="text-center">Do you wish to suspend the user?</h4>
 			      	</div>
 			      	<div class="modal-footer">
-			      		<button type="button" onclick="onSubmitSuspendUser()" class="btn btn-primary ml-auto">Yes</button>
-			      		<button type="button" class="btn btn-primary mr-auto">Cancel</button>
+			      		<button type="button" onclick="onSubmitSuspendUser()" class="btn btn-primary ml-auto mr-auto">Yes</button>
 			      	</div>
 		    	</div>
 			</div>
@@ -308,62 +284,27 @@
 		<!-- End of Content -->
 
 		<!-- Footer -->
-		<div class = "navbar navbar-dark bg-primary fixed-bottom">
-			<footer class="footer">
-		  		<h6 style = "color: white;">© 2020 Copyright Stark Industries</h6>		
-			</footer>
+		<div class="navbar navbar-dark bg-primary">
+			<div class="container-fluid">
+				<footer class="footer" style="min-width: 100%;">
+					<div class="row">
+						<div class="col">
+							<h6 style="color: white;">© 2020 Copyright Stark Industries</h6>
+						</div>
+						<div class="col">
+							<button type="button" onclick="scrollToTopFunction()" id="scrollToTopBtn">
+						    	<i class="fas fa-arrow-alt-circle-up fa-2x"></i>
+						    </button>
+						</div>
+				  	</div>
+				</footer>
+			</div>	
 		</div>
 		<!-- End of Footer -->
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-		
-		<script>
-			function suspendFunction() {
-				var x = document.getElementById("suspendOff");
-			  	if (x.innerHTML === "On") {
-			    	x.innerHTML = "Off";
-			  	} else {
-			    	x.innerHTML = "On";
-			    	if (x.innerHTML === "On"){
-			    		$(document).ready(function(){
-			    			$("#suspendUserModal").modal();
-				    	});
-			    	}else{
-			    		$(document).ready(function(){
-				    		$("#suspendUserModal").modal("hide");
-				    	});
-			    	}
-			  	}
-			}
-			
-			(function() {
-				'use strict';
-			  	window.addEventListener('load', function() {
-				    var forms = document.getElementsByClassName('needs-validation');
-				    var validation = Array.prototype.filter.call(forms, function(form) {
-				    	form.addEventListener('submit', function(event) {
-				        	if (form.checkValidity() === false) {
-				          		event.preventDefault();
-				          		event.stopPropagation();
-				        	}
-				        	form.classList.add('was-validated');
-				      	}, false);
-				    });
-			  	}, false);
-			})();
-			
-			function onSubmitResetPw() {
-				$("#resetPwModal").modal("hide");
-				$("#onSubmitResetPwModal").modal("show");
-			}
-			
-			function onSubmitSuspendUser() {
-				$("#suspendUserModal").modal("hide");
-				$("#onSubmitSuspendUserModal").modal("show");
-			}
-		</script>
 		
 	</body>
 </html>
