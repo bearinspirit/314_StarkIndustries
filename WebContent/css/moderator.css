@@ -21,17 +21,20 @@ body {
   flex-shrink: 0;
 }
 
-#adminBtn:hover {
+#moderatorBtn:hover {
 	text-decoration: none;
-}
-
-.table{
-	text-align: center;
 }
 		
 #aboveTable {
 	background-color: #ecf0f1;
 	padding: 20px 0px;
+}
+
+#scrollToTopBtn {
+	background-color: transparent;
+	border: none;
+	float: right; 
+	color: white;
 }
 
 #tableDiv {
@@ -40,24 +43,30 @@ body {
 
 .tbl { 
 	border-top: none; 
+	text-align: center;
 }
 
-#searchBtn, #infoBtn, #resetPwBtn {
-	border: none;
+.content-checkbox {
+	display: grid;
+	justify-content: center;
+}
+
+#yearRad, #monthRad {
+	padding-bottom: 20px;
+}
+
+.yearDropDown {
+	padding-bottom: 50px;
+}
+
+#yearSelection {
+	position: relative;
+}
+
+#goBtn {
 	background-color: transparent;
-}
-
-.newUserIcon {
-	margin-right: 20px;
-}
-
-#infoHeader {
 	border: none;
-}
-
-#scrollToTopBtn {
-	background-color: transparent;
-	border: none;
-	float: right; 
-	color: white;
+	position: absolute;
+  	top: 50%;
+  	transform: translateY(-50%);
 }
