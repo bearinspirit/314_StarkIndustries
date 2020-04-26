@@ -23,8 +23,6 @@ function scrollToTopFunction() {
 	document.documentElement.scrollTop = 0;
 }
 
-
-// Comparing password and confirm password for registration form
 window.onload = function () {
     var currentPassword = document.getElementById("currentPassword");
     var newPassword = document.getElementById("newPassword");
@@ -38,13 +36,3 @@ window.onload = function () {
         }
     }
 } 
-/* -------------------------------------------------------------------- */
-
-$(document).ready(function(){
-	  $("#allQnsTab").click(function(){
-		  e.preventDefault();
-		  var href = $(this).attr('href');
-		  $(href).data('#askQnsTab').tab('show');
-	  });
-});
-
